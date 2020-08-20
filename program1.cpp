@@ -1,4 +1,8 @@
 // This program calculates the user's pay.
+
+// The preprocessor searches for special lines that begin with the # symbol. 
+// These lines contain commands that cause the preprocessor to modify the 
+// source code in some way.
 #include <iostream>
 using namespace std;
 
@@ -18,6 +22,9 @@ int main()
     pay = hours * rate;
 
     // Display the pay.
-    cout << "You have earned $" << pay << end1;
+    cout << "You have earned $" << pay << endl;
     return 0;
 }
+
+// Compile by running:
+// g++ -o program1 program1.cpp
