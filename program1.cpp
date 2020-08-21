@@ -2,7 +2,7 @@
 
 // The preprocessor searches for special lines that begin with the # symbol. 
 // These lines contain commands that cause the preprocessor to modify the 
-// source code in some way.
+// source code in some way. In other words, a preprocessor directive.
 #include <iostream>
 using namespace std;
 
@@ -26,5 +26,9 @@ int main()
     return 0;
 }
 
-// Compile by running:
+// Invoke preprocessor, compiler, and linker:
 // g++ -o program1 program1.cpp
+
+// To execute the new machine code file, all you need 
+// to do is type ./ and the machine code file name:
+// ./program1.out
