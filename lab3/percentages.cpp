@@ -5,9 +5,9 @@
 #include <iostream>
 using namespace std;
 
-void get_percent(int num, float percent)
+void get_percent(int num, double percent)
 {
-    int res = num * percent;
+    double res = num * percent;
     int percentage = percent * 100;
 
     cout << percentage << " percent of " << num << " is " << res << endl;
