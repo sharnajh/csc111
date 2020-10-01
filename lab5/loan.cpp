@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    string graduated, employed;
+    char graduated, employed;
     double income;
     const double MIN_INCOME = 30000.0;
 
@@ -18,7 +18,7 @@ int main()
     cout << "Enter your annual income: ";
     cin >> income;
 
-    if (employed == "T" && graduated == "T" && income > MIN_INCOME)
+    if (employed == 'T' && graduated == 'T' && income > MIN_INCOME)
     {
         cout << "You qualify for a loan!";
     }
