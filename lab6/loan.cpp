@@ -1,6 +1,6 @@
 // Sharna Hossain
 // CSC 111
-// Lab 5 | loan.cpp
+// Lab 6 | loan.cpp
 
 #include <iostream>
 using namespace std;

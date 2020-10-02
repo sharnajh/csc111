@@ -7,15 +7,18 @@ using namespace std;
 
 int main()
 {
-    cout << "The size of(char) is: " << sizeof(char) << " bytes\n";
-    cout << "The size of(short) is: " << sizeof(short) << " bytes\n";
-    cout << "The size of(int) is: " << sizeof(int) << " bytes\n";
-    cout << "The size of(long) is: " << sizeof(long) << " bytes\n";
-    cout << "The size of(long long) is: " << sizeof(long long) << " bytes\n";
-    cout << "The size of(float) is: " << sizeof(float) << " bytes\n";
-    cout << "The size of(double) is: " << sizeof(double) << " bytes\n";
-    cout << "The size of(long double) is: " << sizeof(long double) << " bytes\n";
-    cout << "The size of(bool) is: " << sizeof(bool) << " bytes\n";
+    string t = "The size of";
+    string b = " bytes\n";
+
+    cout << t << "(char) is: " << sizeof(char) << b;
+    cout << t << "(short) is: " << sizeof(short) << b;
+    cout << t << "(int) is: " << sizeof(int) << b;
+    cout << t << "(long) is: " << sizeof(long) << b;
+    cout << t << "(long long) is: " << sizeof(long long) << b;
+    cout << t << "(float) is: " << sizeof(float) << b;
+    cout << t << "(double) is: " << sizeof(double) << b;
+    cout << t << "(long double) is: " << sizeof(long double) << b;
+    cout << t << "(bool) is: " << sizeof(bool) << b;
     
     return 0;
 }

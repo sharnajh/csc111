@@ -5,19 +5,19 @@
 #include <iostream>
 using namespace std;
 
-int calc_area(int radius)
+double calc_area(double radius)
 {
     return (radius * radius) * 3.14;
 }
 
-int calc_circumference(int radius)
+double calc_circumference(double radius)
 {
     return 2 * 3.14 * radius;
 }
 
 int main()
 {
-    int radius, area, circumference;
+    double radius, area, circumference;
 
     cout << "Enter the radius of the circle: ";
     cin >> radius;
@@ -25,6 +25,7 @@ int main()
     area = calc_area(radius);
     circumference = calc_circumference(radius);
 
+    
     cout << "The area is " << area << endl;
     cout << "The circumference is " << circumference << endl;
 
