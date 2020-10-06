@@ -18,9 +18,6 @@ int main()
     cout << "Enter your annual income: ";
     cin >> income;
 
-    // Using double quotation marks "" in logical comparisons will
-    // refer to the memory location, single quotation marks '' refer
-    // to the value of the char - much more preferable!
     if (employed == 'T' && graduated == 'T' && income > MIN_INCOME)
     {
         cout << "You qualify for a loan!";
