@@ -8,6 +8,7 @@ using namespace std;
 int main()
 {
     int grade;
+    char letter_grade;
     cout << "Enter a grade (0-100): ";
     cin >> grade;
 
@@ -19,20 +20,22 @@ int main()
         // https://www.geeksforgeeks.org/using-range-switch-case-cc/
         // case ranges compile "case 1 ... 3:" as "case 1: case 2: case 3:"
         case 90 ... 100:
-            cout << "A\n";
+            letter_grade = 'A';
             break;
         case 80 ... 89:
-            cout << "B\n";
+            letter_grade = 'B';
             break;
         case 70 ... 79:
-            cout << "C\n";
+            letter_grade = 'C';
             break;
         case 60 ... 69:
-            cout << "D\n";
+            letter_grade = 'D';
             break;
         default:
-            cout << "F\n";
+            letter_grade = 'F';
         }
+
+        cout << "Your grade is " << letter_grade << endl;
     }
     else
     {
