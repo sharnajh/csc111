@@ -9,6 +9,7 @@ int main()
 {
     int grade;
     char letter_grade;
+    
     cout << "Enter a grade (0-100): ";
     cin >> grade;
 

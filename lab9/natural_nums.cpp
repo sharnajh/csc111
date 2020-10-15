@@ -7,12 +7,10 @@ using namespace std;
 
 int main()
 {
-    int num = 10;
+    int num = 100;
 
-    while (num <= 100)
-    {
-        cout << num++ << endl;
-    }
+    while (num >= 10)
+        cout << num-- << endl;
 
     return 0;
 }
