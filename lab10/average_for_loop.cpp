@@ -16,7 +16,7 @@ int main()
     do
     {
         sum = 0;
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < TOTAL; i++)
         {
             cout << "Enter a grade from 0-100: ";
             cin >> input;
