@@ -9,10 +9,10 @@ using namespace std;
 
 int main()
 {
-    const int MAX = 100;
+    const int MIN = 10, MAX = 100;
 
     // Loop from 10 - 100
-    for (int num = 10; num <= MAX; num++)
+    for (int num = MIN; num <= MAX; num++)
     {
         bool isPrime;
         // Check if number is prime by dividing it by every

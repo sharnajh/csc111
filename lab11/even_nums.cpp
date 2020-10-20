@@ -9,10 +9,10 @@ using namespace std;
 
 int main()
 {
-    const int MAX = 1000;
+    const int MIN = 100, MAX = 1000;
 
     // Solution with For Loop
-    for (int num = 100; num <= MAX; num++)
+    for (int num = MIN; num <= MAX; num++)
     {
         if (num % 2 == 0)
         {
