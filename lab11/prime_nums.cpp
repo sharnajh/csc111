@@ -11,22 +11,18 @@ int main()
 {
     const int MIN = 10, MAX = 100;
 
-    // Loop from 10 - 100
     for (int num = MIN; num <= MAX; num++)
     {
-        bool isPrime;
+        bool isPrime = true;
         // Check if number is prime by dividing it by every
         // int greater than 2 but less than the number itself
-        // AKA the n-1 theorem
-        for (int divisor = 2; divisor < num; divisor++)
+        for (int divisor = 2; divisor < num && isPrime; divisor++)
         {
             if (num % divisor == 0)
             {
                 // Terminates loop if not prime
                 isPrime = false;
-                break;
             }
-            isPrime = true;
         }
 
         if (isPrime)
