@@ -28,7 +28,7 @@ int main()
         if (isPrime)
         {
             cout << num << endl;
-        }
+        } 
     }
     return 0;
 }
