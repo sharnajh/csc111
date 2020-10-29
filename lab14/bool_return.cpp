@@ -24,7 +24,8 @@ int main()
 
     answer = div_by_five(num);
 
-    cout << num << " is" << (answer ? " " : " NOT ") << "divisible by 5 \n";
+    cout << num << " is" << (answer ? " " : " NOT ")
+         << "divisible by 5 \n";
 
     return 0;
 }
