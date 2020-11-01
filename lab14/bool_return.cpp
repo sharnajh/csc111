@@ -12,20 +12,19 @@ using namespace std;
 bool div_by_five(int num)
 {
     return num % 5 == 0 ? true : false;
+    
 }
 
 int main()
 {
     int num;
-    bool answer;
 
     cout << "Enter any number: ";
     cin >> num;
 
-    answer = div_by_five(num);
-
-    cout << num << " is" << (answer ? " " : " NOT ")
-         << "divisible by 5 \n";
+    cout << num << " is"
+         << (div_by_five(num) ? " " : " NOT ")
+         << "divisible by 5\n";
 
     return 0;
 }
