@@ -18,14 +18,15 @@ using namespace std;
 int main()
 {
     int num;
+    const int DIV = 5;
 
     cout << "Enter any number: ";
     cin >> num;
 
     cout << num << " is"
         //  << (div_by_five(num) ? " " : " NOT ")
-         << (num % 5 == 0 ? " " : " NOT ")
-         << "divisible by 5\n";
+         << (num % DIV == 0 ? " " : " NOT ")
+         << "divisible by " << DIV << endl;
 
     return 0;
 }
