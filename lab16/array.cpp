@@ -2,9 +2,9 @@
 // CSC 111
 // Lab 16 | array.cpp
 
-// Ask the user to tell you the number of grades. 
+// Ask the user to tell you the number of grades.
 // Define an array with the size of the user's answer.
-// Ask the user to enter grades. 
+// Ask the user to enter grades.
 // Finally, calculate the average.
 
 #include <iostream>
@@ -34,7 +34,7 @@ int main()
         cin >> arr[i];
     }
 
-    cout << "Average is " << FindAvg(arr,size) << endl;
+    cout << "Average is " << FindAvg(arr, size) << endl;
 
     return 0;
 }
