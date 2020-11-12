@@ -23,6 +23,9 @@ int main()
     // }
     // ^ Runs 5 times
 
+    // test[i]++
+    // test[i++]
+
     
 
     return 0;
