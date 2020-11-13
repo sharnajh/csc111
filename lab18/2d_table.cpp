@@ -8,11 +8,17 @@ using namespace std;
 
 int main()
 {
-    int rows, columns, digits = 4;
+    int rows, columns, digits = 1;
     cout << "Enter the number of rows: ";
     cin >> rows;
     cout << "Enter the number of columns: ";
     cin >> columns;
+
+    int bigNum = rows * columns;
+    while(bigNum != 0){
+        bigNum /= 10;
+        digits++;
+    }
 
     // Initialize values
     int arr[rows + 1][columns + 1];
@@ -23,15 +29,6 @@ int main()
             arr[r][c] = r * c;
         }
     }
-
-    // for (int r = 0; r <= rows; r++)
-    // {
-    //     for (int c = 0; c <= columns; c++)
-    //     {
-    //         cout << setw(digits) << arr[r][c];
-    //     }
-    //     cout << "\n";
-    // }
 
     // Output values
     // Column Header
@@ -55,3 +52,12 @@ int main()
 
     return 0;
 }
+
+    // for (int r = 0; r <= rows; r++)
+    // {
+    //     for (int c = 0; c <= columns; c++)
+    //     {
+    //         cout << setw(digits) << arr[r][c];
+    //     }
+    //     cout << "\n";
+    // }

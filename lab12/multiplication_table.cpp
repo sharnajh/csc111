@@ -8,39 +8,37 @@ using namespace std;
 
 int main()
 {
-    int numRows,
-        numColumns,
-        bigNum,
-        digits = 0;
+    int rows,
+        columns,
+        digits = 1;
 
     cout << "Enter the number of rows: ";
-    cin >> numRows;
+    cin >> rows;
     cout << "Enter the number of columns: ";
-    cin >> numColumns;
+    cin >> columns;
 
-    bigNum = numRows * numColumns;
+    int bigNum = rows * columns;
     while(bigNum != 0){
         bigNum /= 10;
         digits++;
     }
-    digits++;
 
     // Column Header
     cout << setw(digits) << " ";
-    for (int col = 1; col <= numColumns; col++)
+    for (int c = 1; c <= columns; c++)
     {
-        cout << setw(digits) << col;
+        cout << setw(digits) << c;
     }
     cout << "\n";
 
-    for (int row = 1; row <= numRows; row++)
+    for (int r = 1; r <= rows; r++)
     {
         // Row Header
-        cout << setw(digits) << row;
+        cout << setw(digits) << r;
 
-        for (int col = 1; col <= numColumns; col++)
+        for (int c = 1; c <= columns; c++)
         {
-            cout << setw(digits) << col * row;
+            cout << setw(digits) << c * r;
         }
         cout << "\n";
     }
