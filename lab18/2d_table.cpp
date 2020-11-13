@@ -15,6 +15,10 @@ int main()
     cin >> columns;
 
     // Initialize values
+    // Adding 1 to the user inputted values for rows and columns
+    // because the user expects to see a timestable starting from
+    // 1, but I want to initialize values starting from zero in
+    // the mulit-dimensional array.
     int arr[rows + 1][columns + 1];
     for (int r = 0; r <= rows; r++)
     {
