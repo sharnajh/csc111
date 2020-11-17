@@ -7,18 +7,19 @@ using namespace std;
 
 int main()
 {
-    const int numStudents = 10,
+    const int capacity = 10,
               MIN = 0,
               MAX = 100;
     const double numTotal = 3.0;
 
-    for (int student = 1; student <= numStudents; student++)
+    for (int student = 1; student <= capacity; student++)
     {
         double sum = 0, 
                average;
         int input;
 
-        cout << "*Recording grades for Student " << student << "*" << endl;
+        cout << "*Recording grades for Student ";
+        cout << student << "*" << endl;
 
         for (int i = 0; i < numTotal; i++)
         {
@@ -35,8 +36,8 @@ int main()
             sum += input;
         }
         average = sum / numTotal;
-        cout << "The average for Student " << student << " is " << average << endl;
-        cout << "\n";
+        cout << "The average for Student " << student;
+        cout << " is " << average << endl << endl;
     }
 
     return 0;
