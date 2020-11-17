@@ -11,7 +11,7 @@ void output(int[], int, string);
 int FindMax(int arr[], int size)
 {
     int index = 0;
-    for (int i = 0; i < size; i++)
+    for (int i = 1; i < size; i++)
     {
         index = arr[index] > arr[i] ? index : i;
     }
@@ -42,7 +42,7 @@ int main()
 int FindMin(int arr[], int size)
 {
     int index = 0;
-    for (int i = 0; i < size; i++)
+    for (int i = 1; i < size; i++)
     {
         index = arr[index] < arr[i] ? index : i;
     }
