@@ -24,7 +24,7 @@ int main()
         }
     }
 
-    // Output values
+    // Output multiplication table
     // Column Header
     cout << setw(digits) << " ";
     for (int c = 1; c <= columns; c++)
@@ -46,12 +46,3 @@ int main()
 
     return 0;
 }
-
-    // for (int r = 0; r <= rows; r++)
-    // {
-    //     for (int c = 0; c <= columns; c++)
-    //     {
-    //         cout << setw(digits) << arr[r][c];
-    //     }
-    //     cout << "\n";
-    // }
