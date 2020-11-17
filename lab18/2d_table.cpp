@@ -8,17 +8,11 @@ using namespace std;
 
 int main()
 {
-    int rows, columns, digits = 1;
+    int rows, columns, digits = 4;
     cout << "Enter the number of rows: ";
     cin >> rows;
     cout << "Enter the number of columns: ";
     cin >> columns;
-
-    int bigNum = rows * columns;
-    while(bigNum != 0){
-        bigNum /= 10;
-        digits++;
-    }
 
     // Initialize values
     int arr[rows + 1][columns + 1];
