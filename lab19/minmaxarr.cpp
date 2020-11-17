@@ -20,7 +20,7 @@ int FindMax(int arr[], int size)
 
 int main()
 {
-    int size, min, max;
+    int size;
     cout << "How many numbers do you want to enter? ";
     cin >> size;
 
@@ -32,12 +32,9 @@ int main()
         cin >> arr[i];
     }
 
-    max = FindMax(arr, size);
-    min = FindMin(arr, size);
-
     // Output values
-    output(arr, max, "Max");
-    output(arr, min, "Min");
+    output(arr, FindMax(arr, size), "Max");
+    output(arr, FindMin(arr, size), "Min");
 
     return 0;
 }
