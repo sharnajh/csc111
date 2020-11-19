@@ -5,6 +5,8 @@
 #include <iostream>
 using namespace std;
 
+void output(int[], int, int);
+
 int search(int arr[], int size, int target)
 {
     for (int i = 0; i < size; i++)
@@ -20,7 +22,7 @@ int search(int arr[], int size, int target)
 int main()
 {
     // Initialize values
-    int size, target, index;
+    int size, target;
 
     cout << "Enter the size of the array of numbers: ";
     cin >> size;
@@ -35,9 +37,14 @@ int main()
     cout << "Which number are you looking for? ";
     cin >> target;
 
-    index = search(arr, size, target);
-
     // Output values
+    output(arr, target, search(arr, size, target));
+
+    return 0;
+}
+
+void output(int arr[], int target, int index)
+{
     if (index == -1)
     {
         cout << target << " cannot be found in array";
@@ -48,6 +55,4 @@ int main()
         cout << " element and can be found at ";
         cout << "array[" << index << "]\n";
     }
-
-    return 0;
 }
