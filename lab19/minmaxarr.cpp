@@ -33,8 +33,8 @@ int main()
     }
 
     // Output values
-    output(arr, FindMax(arr, size), "Max");
-    output(arr, FindMin(arr, size), "Min");
+    output(arr, FindMax(arr, size), "Max");  // Max
+    output(arr, FindMin(arr, size), "Min");  // Min
 
     return 0;
 }
@@ -52,7 +52,7 @@ int FindMin(int arr[], int size)
 void output(int arr[], int index, string value)
 {
     cout << value << " number is " << arr[index];
-    cout << " which is the #" << index + 1;
+    cout << ", which is the #" << index + 1;
     cout << " element in the array and is ";
     cout << "located in array[" << index << "].\n";
 }
