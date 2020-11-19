@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 
-void output(int[], int, int);
+void output(int, int);
 
 int search(int arr[], int size, int target)
 {
@@ -35,12 +35,12 @@ int main()
     cin >> target;
 
     // Output values
-    output(arr, target, search(arr, size, target));
+    output(target, search(arr, size, target));
 
     return 0;
 }
 
-void output(int arr[], int target, int index)
+void output(int target, int index)
 {
     if (index == -1)
     {
