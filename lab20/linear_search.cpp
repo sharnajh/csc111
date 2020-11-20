@@ -7,11 +7,11 @@ using namespace std;
 
 void output(int, int);
 
-int search(int arr[], int size, int target)
+int search(int arr[], int size, int query)
 {
     for (int i = 0; i < size; i++)
     {
-        if (arr[i] == target) return i;
+        if (arr[i] == query) return i;
     }
     return -1;
 }
@@ -19,7 +19,7 @@ int search(int arr[], int size, int target)
 int main()
 {
     // Initialize values
-    int size, target;
+    int size, query;
 
     cout << "Enter the size of the array of numbers: ";
     cin >> size;
@@ -32,23 +32,23 @@ int main()
     }
 
     cout << "Which number are you looking for? ";
-    cin >> target;
+    cin >> query;
 
     // Output values
-    output(target, search(arr, size, target));
+    output(query, search(arr, size, query));
 
     return 0;
 }
 
-void output(int target, int index)
+void output(int query, int index)
 {
     if (index == -1)
     {
-        cout << target << " cannot be found in array";
+        cout << query << " cannot be found in array";
     }
     else
     {
-        cout << target << " is the #" << index + 1;
+        cout << query << " is the #" << index + 1;
         cout << " element and can be found at ";
         cout << "array[" << index << "]\n";
     }
