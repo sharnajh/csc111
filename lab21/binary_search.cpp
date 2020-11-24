@@ -1,18 +1,31 @@
 // Sharna Hossain
 // CSC 111
-// Lab 20 | linear_search.cpp
+// Lab 21 | binary_search.cpp
 
 #include <iostream>
 using namespace std;
 
 void output(int, int);
 
-int search(int arr[], int size, int query)
+int binarySearch(int arr[], int size, int query)
 {
-    for (int index = 0; index < size; index++)
+    // Check middle value of array
+    int middleIndex = size / 2;
+    if (arr[middleIndex] == query) return middleIndex;
+
+    // Check left-hand of array
+    for (int index = 0; index < middleIndex; index++)
+    {
+        if(arr[index] == query) return index;
+    }
+
+    // Check right-hand of array
+    for (int index = middleIndex; index < size; index++)
     {
         if (arr[index] == query) return index;
     }
+
+    // Query does not exist in array
     return -1;
 }
 
@@ -34,8 +47,8 @@ int main()
     cout << "Enter the number you're searching for:  ";
     cin >> query;
 
-    // Output values
-    output(query, search(arr, size, query));
+    // Output Values
+    output(query, binarySearch(arr, size, query));
 
     return 0;
 }
