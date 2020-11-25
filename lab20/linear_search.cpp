@@ -7,7 +7,7 @@ using namespace std;
 
 void output(int, int);
 
-int search(int arr[], int size, int query)
+int linearSearch(int arr[], int size, int query)
 {
     for (int index = 0; index < size; index++)
     {
@@ -35,7 +35,7 @@ int main()
     cin >> query;
 
     // Output values
-    output(query, search(arr, size, query));
+    output(query, linearSearch(arr, size, query));
 
     return 0;
 }

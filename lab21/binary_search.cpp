@@ -16,12 +16,12 @@ int forLoop(int arr[], int min, int max, int query)
     }
 }
 
-int binarySearch(int arr[], int size, int query)
+int binary_search(int arr[], int size, int query)
 {
     if (size > 2)
     {
         int middleIndex = size / 2;
-        
+
         // Check middle value of array
         if (arr[middleIndex] == query)
             return middleIndex;
@@ -60,7 +60,7 @@ int main()
     cin >> query;
 
     // Output Values
-    output(query, binarySearch(arr, size, query));
+    output(query, binary_search(arr, size, query));
 
     return 0;
 }
