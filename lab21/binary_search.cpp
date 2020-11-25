@@ -7,22 +7,34 @@ using namespace std;
 
 void output(int, int);
 
+int forLoop(int arr[], int min, int max, int query)
+{
+    for (int index = min; index < max; index++)
+    {
+        if (arr[index] == query)
+            return index;
+    }
+}
+
 int binarySearch(int arr[], int size, int query)
 {
-    // Check middle value of array
-    int middleIndex = size / 2;
-    if (arr[middleIndex] == query) return middleIndex;
-
-    // Check left-hand of array
-    for (int index = 0; index < middleIndex; index++)
+    if (size > 2)
     {
-        if(arr[index] == query) return index;
+        int middleIndex = size / 2;
+        
+        // Check middle value of array
+        if (arr[middleIndex] == query)
+            return middleIndex;
+
+        // Check left-hand of array
+        forLoop(arr, 0, middleIndex, query);
+
+        // Check right-hand of array
+        forLoop(arr, (middleIndex + 1), size, query);
     }
-
-    // Check right-hand of array
-    for (int index = middleIndex; index < size; index++)
+    else
     {
-        if (arr[index] == query) return index;
+        forLoop(arr, 0, size, query);
     }
 
     // Query does not exist in array
@@ -57,12 +69,12 @@ void output(int query, int index)
 {
     if (index == -1)
     {
-        cout << query << " cannot be found in array";
+        cout << query << " does not exist in array";
     }
     else
     {
         cout << query << " is the #" << index + 1;
-        cout << " element and can be found at ";
+        cout << " element and is located at ";
         cout << "array[" << index << "]\n";
     }
 }
