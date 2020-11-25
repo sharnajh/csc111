@@ -23,6 +23,7 @@ void selection_sort(int arr[], int size)
         }
         if (min != i) {
             int temp = arr[min];
+            
             arr[min] = arr[i];
             arr[i] = temp;
         }
