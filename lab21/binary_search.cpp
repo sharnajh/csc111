@@ -3,42 +3,40 @@
 // Lab 21 | binary_search.cpp
 
 #include <iostream>
+// In order for binary search to work, the array
+// needs to already be in ascending order.
+// For this exercise, I will use the algorithm's library
+// to sort so that I can focus on implementing binary search.
+#include <algorithm>
+#include <iomanip>
 using namespace std;
 
 void output(int, int);
 
-int forLoop(int arr[], int min, int max, int query)
-{
-    for (int index = min; index < max; index++)
-    {
-        if (arr[index] == query)
-            return index;
-    }
-}
-
 int binary_search(int arr[], int size, int query)
 {
-    if (size > 2)
+    int first = 0,
+        last = size - 1,
+        middle, result = -1;
+    bool found = false;
+
+    while (!found && first <= last)
     {
-        int middleIndex = size / 2;
-
-        // Check middle value of array
-        if (arr[middleIndex] == query)
-            return middleIndex;
-
-        // Check left-hand of array
-        forLoop(arr, 0, middleIndex, query);
-
-        // Check right-hand of array
-        forLoop(arr, (middleIndex + 1), size, query);
-    }
-    else
-    {
-        forLoop(arr, 0, size, query);
+        middle = (first + last) / 2;
+        if (arr[middle] == query)
+        {
+            found = true;
+            result = middle;
+        }
+        else if (arr[middle] > query)
+        {
+            last = middle - 1;
+        }
+        else
+            first = middle + 1;
     }
 
-    // Query does not exist in array
-    return -1;
+    return result;
 }
 
 int main()
@@ -56,7 +54,15 @@ int main()
         cin >> arr[i];
     }
 
-    cout << "Enter the number you're searching for:  ";
+    // Sorting array in ascending order
+    sort(arr, arr + size);
+    cout << "Sorted list of numbers: ";
+    for(int i = 0; i < size; i++)
+    {
+        cout << setw(4) << arr[i];
+    }
+
+    cout << "\nEnter the number you're searching for:  ";
     cin >> query;
 
     // Output Values
