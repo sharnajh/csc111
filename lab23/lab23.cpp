@@ -11,6 +11,7 @@
 // to give you the sides.
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Rectangle
@@ -32,18 +33,20 @@ int main()
     {
         Rectangle shape;
         double width, length;
+        string rectName = "Rectangle #";
+        rectName += to_string(i);
 
-        cout << "Enter Rectangle #" << i << " length: ";
+        cout << "Enter " << rectName << " length: ";
         cin >> length;
-        cout << "Enter Rectangle #" << i << " width: ";
+        cout << "Enter " << rectName << " width: ";
         cin >> width;
 
         shape.set_width(width);
         shape.set_length(length);
 
-        cout << "Rectangle #" << i << " area: "
+        cout << rectName << " area: "
              << shape.calc_area() << "\n";
-        cout << "Rectangle #" << i << " perimeter: "
+        cout << rectName << " perimeter: "
              << shape.calc_perimeter() << "\n";
     }
 
