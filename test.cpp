@@ -1,32 +1,50 @@
 #include <iostream>
+#include <vector>
+#include <cassert>
+
 using namespace std;
+
+// The listEvens function, take an integer n as input and return a vector
+// containing all even numbers k with 0 <= k <= n. printVector function,
+// simply prints the values in the vector.  Fill the blanks.
+
+// vector<int> listEvens(int n)
+// {
+//     vector<int> result;
+//     for (int k = 0; k <= n; k++)
+//         if (k % 2 == 0) result.push_back(k);
+//     return result;
+// }
+
+// void printVector(const vector<int> vec)
+// {
+//     cout << "The vector is";
+//     if(vec.size() == 0)
+//         cout << " empty";
+//     else
+//         for (int el : vec)
+//             cout << ' ' << el;
+//     cout << '\n';
+// }
 
 int main()
 {
-    // int A = 0;
-    // int B = -4;
-    // int C = 0;
-    // int D = 10;
-    // if (!((A == D) && (A == C) || (B > D) || !(A >= B) && ((A <= C) && (A >= 0))))
-    // {
-    //     cout << "True";
-    // }
-    // else
-    // {
-    //     cout << "False";
-    // }
 
-    // int count;
-    // for (count = 1; count <= 5; count++)
-    // {
-    //     cout << "Hello" << endl;
-    // }
-    // ^ Runs 5 times
+    class Yard
+    {
+    private:
+        double length;
 
-    // test[i]++
-    // test[i++]
-
-    
-
-    return 0;
-}
+    public:
+        Yard(double l)
+        {
+            length = l;
+        }
+        //double conversion function
+        void operator double()
+        {
+            return length;
+        }
+    };
+        return 0;
+    }
