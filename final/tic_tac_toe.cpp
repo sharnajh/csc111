@@ -7,20 +7,21 @@
 using namespace std;
 
 // Global Variables
-// This would normally be a local variable within
-// main() but for the sake of this project it is global.
-const int ROWS = 3, COLUMNS = 3;
+// This program will work with any size!
+// Keeping it as a global variable for the
+// sake of this project.
+const int SIZE = 4;
 
-void print_board(char[ROWS][COLUMNS]);
-char check_winner(char[ROWS][COLUMNS]);
+void print_board(char[SIZE][SIZE]);
+char check_winner(char[SIZE][SIZE]);
 
 int main()
 {
     // Initialize Values
-    char board[ROWS][COLUMNS];
-    for (int r = 0; r < ROWS; r++)
+    char board[SIZE][SIZE];
+    for (int r = 0; r < SIZE; r++)
     {
-        for (int c = 0; c < COLUMNS; c++)
+        for (int c = 0; c < SIZE; c++)
         {
             board[r][c] = ' ';
         }
@@ -46,12 +47,12 @@ int main()
             {
                 cout << "Row (1-3): ";
                 cin >> row;
-            } while (row > ROWS || row < 0);
+            } while (row > SIZE || row < 0);
             do
             {
                 cout << "Column (1-3): ";
                 cin >> col;
-            } while (col > COLUMNS || col < 0);
+            } while (col > SIZE || col < 0);
 
             if (board[row - 1][col - 1] != ' ')
             {
@@ -67,7 +68,7 @@ int main()
 
         // Check Winner
         winner = check_winner(board);
-    } while (moves < (ROWS * COLUMNS) && !winner);
+    } while (moves < (SIZE * SIZE) && !winner);
 
     // End Game
     print_board(board);
@@ -83,15 +84,15 @@ int main()
     return 0;
 }
 
-char check_winner(char board[ROWS][COLUMNS])
+char check_winner(char board[SIZE][SIZE])
 {
     char current = '\0';
 
     // Check Horizontally
-    for (int r = 0; r < ROWS; r++)
+    for (int r = 0; r < SIZE; r++)
     {
         current = board[r][0];
-        for (int c = 1; c < COLUMNS; c++)
+        for (int c = 1; c < SIZE; c++)
         {
             if (current != board[r][c] || board[r][c] == ' ')
             {
@@ -104,10 +105,10 @@ char check_winner(char board[ROWS][COLUMNS])
     }
 
     // Check Vertically
-    for (int c = 0; c < COLUMNS; c++)
+    for (int c = 0; c < SIZE; c++)
     {
-        current = board[0][ROWS];
-        for (int r = 1; r < ROWS; r++)
+        current = board[0][SIZE];
+        for (int r = 1; r < SIZE; r++)
         {
             if (current != board[r][c] || board[r][c] == ' ')
             {
@@ -120,7 +121,7 @@ char check_winner(char board[ROWS][COLUMNS])
     }
 
     // Check Diagonally
-    for (int r = 0; r < ROWS; r++)
+    for (int r = 0; r < SIZE; r++)
     {
         current = board[0][0];
         if (current != board[r][r] || board[r][r] == ' ')
@@ -132,10 +133,10 @@ char check_winner(char board[ROWS][COLUMNS])
     if (current)
         return current;
 
-    for (int r = ROWS - 1; r >= 0; r--)
+    for (int r = SIZE - 1; r >= 0; r--)
     {
         current = board[2][0];
-        if (current != board[r][ROWS - r - 1] || board[r][ROWS - r - 1] == ' ')
+        if (current != board[r][SIZE - r - 1] || board[r][SIZE - r - 1] == ' ')
         {
             current = '\0';
             break;
@@ -148,35 +149,35 @@ char check_winner(char board[ROWS][COLUMNS])
     return current;
 }
 
-void print_board(char board[ROWS][COLUMNS])
+void print_board(char board[SIZE][SIZE])
 {
-    for (int r = 0; r < ROWS; r++)
+    for (int r = 0; r < SIZE; r++)
     {
-        for (int c = 0; c < COLUMNS; c++)
+        for (int c = 0; c < SIZE; c++)
         {
             cout << setw(4) << ' ';
-            cout << setw(4) << (c == COLUMNS - 1 ? "" : "|");
+            cout << setw(4) << (c == SIZE - 1 ? "" : "|");
         }
         cout << "\n";
-        for (int c = 0; c < COLUMNS; c++)
+        for (int c = 0; c < SIZE; c++)
         {
             cout << setw(4) << board[r][c];
-            cout << setw(4) << ((c == COLUMNS - 1) ? "" : "|");
+            cout << setw(4) << ((c == SIZE - 1) ? "" : "|");
         }
         cout << "\n";
-        if (r != 2)
+        if (r != SIZE - 1)
         {
-            for (int c = 0; c < COLUMNS; c++)
+            for (int c = 0; c < SIZE; c++)
             {
-                cout << "_______" << ((c == COLUMNS - 1) ? "" : "|");
+                cout << "_______" << ((c == SIZE - 1) ? "" : "|");
             }
         }
         else
         {
-            for (int c = 0; c < COLUMNS; c++)
+            for (int c = 0; c < SIZE; c++)
             {
                 cout << setw(4) << ' ';
-                cout << setw(4) << ((c == COLUMNS - 1) ? "" : "|");
+                cout << setw(4) << ((c == SIZE - 1) ? "" : "|");
             }
         }
         cout << "\n";
