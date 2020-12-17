@@ -6,7 +6,7 @@
 #include <iomanip>
 using namespace std;
 
-const int SIZE = 3;
+const int SIZE = 6;
 
 void print_board(char[SIZE][SIZE]);
 void print_instructions();
@@ -133,7 +133,7 @@ char check_winner(char board[SIZE][SIZE])
 
     for (int r = SIZE - 1; r >= 0; r--)
     {
-        current = board[2][0];
+        current = board[SIZE - 1][0];
         if (current != board[r][SIZE - r - 1] || board[r][SIZE - r - 1] == ' ')
         {
             current = '\0';
