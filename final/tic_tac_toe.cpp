@@ -105,7 +105,7 @@ char check_winner(char board[SIZE][SIZE])
     // Check Vertically
     for (int c = 0; c < SIZE; c++)
     {
-        current = board[0][SIZE];
+        current = board[0][c];
         for (int r = 1; r < SIZE; r++)
         {
             if (current != board[r][c] || board[r][c] == ' ')
