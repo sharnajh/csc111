@@ -6,13 +6,10 @@
 #include <iomanip>
 using namespace std;
 
-// Global Variables
-// This program will work with any size!
-// Keeping it as a global variable for the
-// sake of this project.
-const int SIZE = 4;
+const int SIZE = 3;
 
 void print_board(char[SIZE][SIZE]);
+void print_instructions();
 char check_winner(char[SIZE][SIZE]);
 
 int main()
@@ -31,6 +28,7 @@ int main()
     char winner = '\0';
 
     // Game
+    print_instructions();
     do
     {
         print_board(board);
@@ -45,12 +43,12 @@ int main()
             cout << "Player " << player_val << " Move: \n";
             do
             {
-                cout << "Row (1-3): ";
+                cout << "Row (1-" << SIZE << "): ";
                 cin >> row;
             } while (row > SIZE || row < 0);
             do
             {
-                cout << "Column (1-3): ";
+                cout << "Column (1-" << SIZE << "): ";
                 cin >> col;
             } while (col > SIZE || col < 0);
 
@@ -182,4 +180,13 @@ void print_board(char board[SIZE][SIZE])
         }
         cout << "\n";
     }
+}
+
+void print_instructions()
+{
+    cout << "Instructions:\n";
+    cout << "1) Player X goes first\n";
+    cout << "2) Enter the row and column position of your move\n";
+    cout << "3) First player to fill up a diagonal, horizontal, or vertical row\n";
+    cout << "with their marks is the winner.\n";
 }
