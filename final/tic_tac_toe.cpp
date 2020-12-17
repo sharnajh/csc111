@@ -140,8 +140,6 @@ char check_winner(char board[SIZE][SIZE])
             break;
         }
     }
-    if (current)
-        return current;
 
     // Default
     return current;
