@@ -6,7 +6,7 @@
 #include <iomanip>
 using namespace std;
 
-const int SIZE = 6;
+const int SIZE = 3;
 
 void print_board(char[SIZE][SIZE]);
 void print_instructions();
