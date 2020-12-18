@@ -8,6 +8,7 @@ using namespace std;
 
 const int SIZE = 3;
 
+void initialize_board(char(*board)[SIZE][SIZE]);
 void print_board(char[SIZE][SIZE]);
 void print_instructions();
 char check_winner(char[SIZE][SIZE]);
@@ -16,13 +17,7 @@ int main()
 {
     // Initialize Values
     char board[SIZE][SIZE];
-    for (int r = 0; r < SIZE; r++)
-    {
-        for (int c = 0; c < SIZE; c++)
-        {
-            board[r][c] = ' ';
-        }
-    }
+    initialize_board(&board);
     int moves = 0;
     bool player = true;
     char winner = '\0';
@@ -80,6 +75,26 @@ int main()
     }
 
     return 0;
+}
+
+void initialize_board(char (*board)[SIZE][SIZE])
+{
+    for (int r = 0; r < SIZE; r++)
+    {
+        for (int c = 0; c < SIZE; c++)
+        {
+            (*board)[r][c] = ' ';
+        }
+    }
+}
+
+void print_instructions()
+{
+    cout << "Instructions:\n";
+    cout << "1) Player X goes first\n";
+    cout << "2) Enter the row and column position of your move\n";
+    cout << "3) First player to fill up a diagonal, horizontal, or vertical row\n";
+    cout << "with their marks is the winner.\n";
 }
 
 char check_winner(char board[SIZE][SIZE])
@@ -178,13 +193,4 @@ void print_board(char board[SIZE][SIZE])
         }
         cout << "\n";
     }
-}
-
-void print_instructions()
-{
-    cout << "Instructions:\n";
-    cout << "1) Player X goes first\n";
-    cout << "2) Enter the row and column position of your move\n";
-    cout << "3) First player to fill up a diagonal, horizontal, or vertical row\n";
-    cout << "with their marks is the winner.\n";
 }
